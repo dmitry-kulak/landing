@@ -7,7 +7,6 @@ const croppedReviews = reviews.map(review => [
   review.innerHTML.slice(200, review.innerHTML.length)])
 
 for (let i = 0; i <= 2; i++){
-  console.log(reviews[i].innerHTML)
   reviews[i].innerHTML = croppedReviews[i][0] + '...'
 }
 
