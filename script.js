@@ -1,21 +1,19 @@
-'use strict'
+'use strict';
 
-const reviews = Array.from(document.querySelectorAll('.review-text'))
+const reviews = document.querySelectorAll('.review-text');
 
-const croppedReviews = reviews.map(review => [
-  review.innerHTML.slice(0, 200),
-  review.innerHTML.slice(200, review.innerHTML.length)])
+const cropText = (reviews, cropTo = 200) => {
+  reviews.forEach(
+    (review) => review.innerHTML = review.innerHTML.slice(0, cropTo) +
+      '...',
+  );
+};
 
-for (let i = 0; i <= 2; i++){
-  reviews[i].innerHTML = croppedReviews[i][0] + '...'
-}
+cropText(reviews);
 
-const showFullText = (review, croppedReview) => {
-  review.innerHTML = croppedReview[0] + croppedReview[1];
-  review.classList.remove('cropped')
-}
+const hamburger = document.getElementById('hamburger');
+const navbarNav = document.getElementById('navbar-nav')
 
-for (let i = 0; i <= 2; i++){
-  reviews[i].addEventListener('click',
-    () => showFullText(reviews[i], croppedReviews[i]))
-}
+hamburger.addEventListener('click', () => {
+  navbarNav.classList.toggle('show');
+})
