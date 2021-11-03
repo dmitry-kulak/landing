@@ -4,119 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/vendor/slick.css">
+    <link rel="stylesheet" href="css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
 <header class="navbar">
-    <a id="logo" href="#">
-        <img src="assets/landing.svg" alt="Landing">
-    </a>
-    <nav id="navbar-nav">
-        <a href="#">Why Landing</a>
-        <a href="#">Resources</a>
-        <button>Sign In</button>
-    </nav>
-    <button id="hamburger">
+    <div class="container container_navbar">
+        <a class="navbar__link" href="#">
+            <svg class="navbar__logo" width="120" height="30" viewBox="0 0 120 30" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                    <path d="M17.4097 24.4896C17.3071 25.0638 16.8151 25.4046 16.0819 25.2816C10.8343 24.4098 5.86864 23.3766 0.676183 22.2228C0.213579 22.1189 -0.0684241 21.8309 0.0143767 21.4661C0.0251768 21.4175 0.0311769 21.3929 0.041977 21.3443C0.235179 20.4923 1.63079 20.4221 1.9416 19.0217C3.04981 14.0273 4.15802 9.03402 5.26623 4.04017C5.57703 2.63915 4.42802 1.99835 4.62122 1.14634C4.63202 1.09774 4.63802 1.07314 4.64882 1.02454C4.73162 0.659733 5.08563 0.516331 5.51343 0.611732C8.20386 1.21414 9.29647 1.49134 11.9977 2.02475C12.4273 2.10995 12.6931 2.38355 12.6211 2.75075C12.6115 2.79995 12.6067 2.82455 12.5971 2.87316C12.4303 3.73056 11.2225 3.82956 10.9411 5.23658C9.99068 9.98743 9.03967 14.7383 8.08926 19.4885C7.88706 20.4983 8.18466 21.5771 9.30487 21.7949C10.6753 22.0613 11.1061 22.1838 12.4789 22.4334C15.9529 23.0154 15.8005 18.1337 17.3317 18.3857C17.5142 18.4157 17.5844 18.4343 17.7668 18.4643C18.023 18.5147 18.2396 18.7703 18.1532 19.3091L17.4097 24.4896Z"
+                          fill="black"/>
+                    <path d="M35.1576 26.8995C34.959 27.6945 33.0042 27.7323 31.2059 27.5421C29.2451 27.3351 28.3991 26.8539 28.4405 25.7253C27.5171 26.5299 26.0159 27.0789 23.8715 26.7951C20.395 26.3349 18.211 24.428 19.183 21.302C20.1364 18.236 23.2841 17.0738 26.2709 17.4722C27.5915 17.6486 28.5755 18.086 29.2391 18.6392C29.2493 18.6026 29.2541 18.584 29.2643 18.5474C29.8859 14.9041 30.1067 13.3279 28.4963 13.1191C26.3597 12.8419 26.0363 17.0444 23.2505 16.6388C21.9358 16.4474 21.3064 15.5215 21.673 14.3377C22.444 11.8483 25.7993 11.2903 28.9151 11.6569C32.5727 12.0877 35.3388 14.7937 34.833 18.6944C34.5474 20.9102 34.407 22.0178 34.1322 24.2336C33.8694 26.4333 35.3718 26.0433 35.1576 26.8995ZM28.3913 23.4836C28.4945 22.9166 28.5467 22.6328 28.6505 22.0658C28.9331 20.2094 28.3043 19.409 27.3863 19.292C26.4365 19.1708 25.5341 19.9034 25.1723 21.1508C24.5453 23.3126 24.7727 25.3052 26.0999 25.472C27.1679 25.6071 28.1045 24.5204 28.3913 23.4836Z"
+                          fill="black"/>
+                    <path d="M55.7531 28.2646C55.7525 28.3144 55.7519 28.339 55.7507 28.3888C55.7441 28.7632 55.4033 28.9762 54.9323 28.9666C52.2377 28.9132 50.8906 28.8712 48.1972 28.756C47.692 28.7344 47.3992 28.5022 47.416 28.1284C47.4184 28.0786 47.4196 28.054 47.4214 28.0042C47.4622 27.1006 48.7828 26.7826 48.742 25.3449C48.7012 23.1081 48.682 21.9897 48.646 19.7529C48.6136 16.6611 48.0538 15.4844 46.6066 15.4118C45.1924 15.3404 44.4472 16.5135 44.3428 18.3195C44.1862 21.0351 44.1076 22.3923 43.951 25.1079C43.8682 26.5402 45.319 26.995 45.2716 27.8986C45.2692 27.9484 45.268 27.973 45.265 28.0228C45.2452 28.3966 44.9314 28.5994 44.4262 28.5712C41.5191 28.4104 40.0659 28.312 37.1619 28.0792C36.6579 28.039 36.3735 27.796 36.4041 27.4228C36.4083 27.373 36.4101 27.3484 36.4143 27.2986C36.4887 26.3968 37.9887 26.1418 38.0997 24.7113C38.2905 22.2609 38.3859 21.0357 38.5761 18.5853C38.6925 17.0925 36.9933 16.7673 37.0689 15.8661C37.0719 15.8289 37.0737 15.8103 37.0767 15.7731C37.1079 15.4004 37.4451 15.2408 37.9125 15.0596C39.7815 14.3474 40.7091 13.9838 42.5524 13.241C43.3762 12.8882 43.7572 13.442 43.7194 14.0642C43.684 14.6498 43.666 14.942 43.6306 15.5277C44.59 14.0858 46.2472 13.358 48.3364 13.4324C51.9347 13.5602 54.2639 16.6245 54.2879 20.1231C54.4085 22.2849 54.4709 23.3655 54.5981 25.5273C54.6707 26.965 55.7687 27.3598 55.7531 28.2646Z"
+                          fill="black"/>
+                    <path d="M75.3554 28.0245C75.3524 27.9747 75.3506 27.9501 75.3476 27.9003C75.2918 26.9973 76.6047 26.5383 76.5099 25.1067C76.3527 22.7414 76.2747 21.5588 76.1174 19.1936C76.0226 17.762 74.6996 17.4092 74.6534 16.6622C74.6504 16.6124 74.6486 16.5878 74.6456 16.538C74.6246 16.1954 74.9054 16.022 75.3416 15.7754C77.2257 14.729 78.1593 14.1973 80.0091 13.1203C80.8659 12.6121 81.4491 13.0615 81.5001 13.6519C81.8187 17.3186 82.1367 20.9852 82.4553 24.6519C82.5795 26.0817 84.1143 26.3199 84.1971 27.2205C84.2019 27.2703 84.2037 27.2949 84.2085 27.3447C84.2427 27.7173 83.9277 27.9663 83.4237 28.0113C80.5365 28.2687 79.0911 28.3797 76.199 28.5663C75.695 28.5975 75.3788 28.3977 75.3554 28.0245ZM74.6648 8.69109C74.552 6.91688 75.8936 5.49186 78.0321 5.32806C80.1393 5.16606 81.6837 6.36967 81.8427 8.14089C81.9987 9.88031 80.6649 11.3827 78.5097 11.5483C76.3227 11.7157 74.7758 10.4341 74.6648 8.69109Z"
+                          fill="black"/>
+                    <path d="M104.878 24.4261C104.887 24.4753 104.891 24.4999 104.899 24.5485C104.963 24.9175 104.667 25.1905 104.201 25.2697C101.537 25.7221 100.203 25.9327 97.5314 26.3239C97.0304 26.3971 96.6986 26.2243 96.6452 25.8535C96.638 25.8043 96.6343 25.7797 96.6278 25.7305C96.4993 24.8347 97.739 24.2761 97.43 22.8709C96.9716 20.6809 96.7436 19.5859 96.2899 17.3952C95.6797 14.364 94.9093 13.3128 93.4723 13.512C92.0677 13.707 91.5541 14.9982 91.7893 16.7922C92.1427 19.4893 92.3197 20.8375 92.6731 23.5345C92.8597 24.9571 94.3717 25.1323 94.4935 26.0293C94.5001 26.0785 94.5037 26.1031 94.5103 26.1523C94.5607 26.5231 94.2895 26.7811 93.7879 26.8477C90.8983 27.2335 89.4517 27.4081 86.5554 27.7226C86.0526 27.7772 85.728 27.5918 85.6884 27.2191C85.683 27.1699 85.6806 27.1447 85.6752 27.0955C85.5798 26.1955 87.0055 25.6651 86.8477 24.2389C86.577 21.7963 86.4414 20.5747 86.1708 18.1315C86.0058 16.6434 84.2766 16.6416 84.1824 15.7416C84.1782 15.7044 84.1764 15.6858 84.1728 15.6486C84.1338 15.2766 84.435 15.057 84.8604 14.7912C86.5633 13.7424 87.4075 13.2114 89.0803 12.1374C89.8243 11.637 90.3025 12.1092 90.3817 12.7284C90.4561 13.3098 90.4933 13.6008 90.5677 14.1828C91.2415 12.5874 92.7355 11.5626 94.8049 11.2446C98.3654 10.6974 101.235 13.2654 101.914 16.7034C102.438 18.8047 102.701 19.8547 103.231 21.9541C103.569 23.3521 104.725 23.5345 104.878 24.4261Z"
+                          fill="black"/>
+                    <path d="M118.306 8.06116L118.335 8.17096C118.494 8.77517 117.352 9.57378 117.777 11.1944L119.67 18.4203C120.965 23.3655 118.294 26.6199 114.475 27.6202C110.353 28.6996 107.04 28.0414 106.471 25.8705C106.219 24.9087 106.597 23.6649 108.054 23.2833C111.021 22.5063 111.833 26.7267 114.1 26.1915C115.069 25.9671 115.675 24.6927 114.84 21.5055L114.725 21.0657C114.139 21.6303 113.317 22.0803 112.356 22.3323C109.059 23.1957 105.254 21.7851 104.117 17.4441C103.037 13.3226 105.45 9.75498 108.829 8.86937C110.176 8.51657 111.403 8.99717 112.303 9.40698C112.234 8.80817 112.595 8.00056 113.421 7.90156L117.342 7.40296C117.823 7.33635 118.184 7.59436 118.306 8.06116ZM114.027 18.4017L112.617 13.0166C112.156 11.258 110.695 9.93798 109.678 10.2044C108.606 10.4852 108.364 11.576 108.778 13.4936C109.128 15.281 111.313 20.9331 113.211 20.5533C113.987 20.3787 114.322 19.5279 114.027 18.4017Z"
+                          fill="black"/>
+                    <path d="M73.9046 27.9978L73.9094 28.1226C73.9238 28.497 73.6496 28.7274 73.211 28.7442L68.7362 28.917C68.237 28.9362 67.9112 28.635 67.8932 28.1664L67.8824 27.8838C66.9758 28.797 65.6497 29.3508 64.1185 29.4102C60.3319 29.5566 56.6275 27.0048 56.4289 21.873C56.2482 17.2097 59.5993 13.9133 63.5443 13.7603C64.8589 13.7093 65.9341 13.9817 66.8018 14.5121L66.641 10.3511C66.584 8.87804 64.9177 8.75624 64.8829 7.84903L64.8793 7.75483C64.8661 7.41102 65.1331 7.05582 65.5663 6.91182L70.3916 5.2528C71.288 4.9372 71.7668 5.1052 71.7992 5.95121L72.5498 25.3536C72.605 26.7924 73.871 27.1212 73.9046 27.9978ZM67.2122 25.1202L66.9788 19.0811C66.9014 17.0783 65.4487 15.2231 64.0117 15.2783C62.4775 15.3377 61.6837 16.7159 61.6861 19.2245C61.6933 21.8556 62.9605 27.8238 65.3107 27.8274C66.3745 27.8172 67.2776 26.8122 67.2122 25.1202Z"
+                          fill="black"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0">
+                        <rect width="120" height="30" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
 
-    </button>
+        <nav class="navbar__nav">
+            <div class="dropdown">
+                <span class="dropdown__heading">Why Landing</span>
+                <ul class="dropdown__list">
+                    <a class="dropdown__link" href="#">Lorem ipsum</a>
+                    <a class="dropdown__link" href="#">Lorem ipsum</a>
+                    <a class="dropdown__link" href="#">Lorem ipsum</a>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <span class="dropdown__heading">Resources</span>
+                <ul class="dropdown__list">
+                    <a class="dropdown__link" href="#">Lorem ipsum</a>
+                    <a class="dropdown__link" href="#">Lorem ipsum</a>
+                    <a class="dropdown__link" href="#">Lorem ipsum</a>
+                </ul>
+
+            </div>
+            <button class="navbar__button" type="button">Sign In</button>
+        </nav>
+        <button class="navbar__hamburger" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
 </header>
 
 <main>
     <!--Intro-->
     <section class="intro">
-        <h1>We're reinventing apartment living</h1>
-        <p class="shaded">Say goodbye to being trapped in a lease. Landing members have access to thousands of
-            apartments with
-            flexible leases.</p>
-        <form class="form-search">
-            <label class="shaded">
-                Location
-                <input type="text" placeholder="Where to?">
-            </label>
-            <label class="shaded">
-                Dates
-                <input type="text" placeholder="How long?">
-            </label>
-            <button class="search-button">Search</button>
-        </form>
-        <img src="assets/photoIntro.png" alt="">
+        <img src="/assets/photo-intro.jpg" alt="" class="intro__background">
+        <div class="container container_intro">
+            <h1 class="intro__title">We're reinventing apartment living</h1>
+            <p class="intro__text">Say goodbye to being trapped in a lease. Landing members have access to
+                thousands
+                of
+                apartments with
+                flexible leases.</p>
+            <form class="search-form">
+                <label class="search-form__label">
+                    Location
+                    <input class="search-form__input" type="text" placeholder="Where to?">
+                </label>
+                <label class="search-form__label">
+                    Dates
+                    <input class="search-form__input" type="text" placeholder="How long?">
+                </label>
+                <button class="search-form__button" type="submit">Search</button>
+            </form>
+        </div>
     </section>
 
     <!--Landing Membership-->
     <section class="membership">
-        <header class="membership-header">
-            <span class="header">Unlock life with your <br> <strong>Landing Membership</strong></span>
-            <div class="annotation">
-                <a href="">Learn More</a>
-                <p>$199 Annual Membership</p>
-            </div>
-        </header>
+        <div class="container">
+            <header class="membership-header">
+                <h2 class="membership-header__title">Unlock life with your <br> <strong>Landing Membership</strong>
+                </h2>
+                <div class="membership-header__annotation">
+                    <a class="membership-header__link" href="">Learn More</a>
+                    <p class="membership-header__price">$199 Annual Membership</p>
+                </div>
+            </header>
 
-        <div class="membership-features">
-            <div class="membership-feature">
-                <object data="assets/leaseHowYouWant.svg" type="image/svg+xml"></object>
-                <p><b>Lease how you want</b></p>
-                <p>Stay between one and 12+ months with the ability to transfer
-                    to other homes in the Landing network.</p>
-            </div>
-            <div class="membership-feature">
-                <object data="assets/bounceAround.svg" type="image/svg+xml"></object>
-                <p><b>Bounce around or stay put</b></p>
-                <p>We're always expanding our network to give you the best selection and options.</p>
-            </div>
-            <div class="membership-feature">
-                <object data="assets/keepCash.svg" type="image/svg+xml"></object>
-                <p><b>Keep cash in your pocket</b></p>
-                <p>No application fees or security deposit.</p>
-            </div>
-            <div class="membership-feature">
-                <object data="assets/enjoyGuaranteed.svg" type="image/svg+xml"></object>
-                <p><b>Enjoy guaranteed peace of mind</b></p>
-                <p>If you're not completely satisfied in your first week, we'll make it right. <a href="#">Learn
-                    More</a></p>
-            </div>
-            <div class="membership-feature">
-                <object data="assets/getUpTo.svg" type="image/svg+xml"></object>
-                <p><b>Get up to 7 free travel days</b></p>
-                <p>Stay with Landing on your next trip. Get up to 7 free days every year. <a href="#">Learn More</a></p>
-            </div>
-            <div class="membership-feature">
-                <object data="assets/restEasy.svg" type="image/svg+xml"></object>
-                <p><b>Rest easy with 24/7 member support</b></p>
-                <p>Questions can come up anytime, so we're always available to help.</p>
+            <div class="membership-features">
+                <div class="membership-feature">
+                    <object class="membership-feature__svg" data="assets/leaseHowYouWant.svg"
+                            type="image/svg+xml"></object>
+                    <p class="membership-feature__title">Lease how you want</p>
+                    <p class="membership-feature__text">Stay between one and 12+ months with the ability to transfer
+                        to other homes in the Landing network.</p>
+                </div>
+                <div class="membership-feature">
+                    <object class="membership-feature__svg" data="assets/bounceAround.svg"
+                            type="image/svg+xml"></object>
+                    <p class="membership-feature__title">Bounce around or stay put</p>
+                    <p class="membership-feature__text">We're always expanding our network to give you the best
+                        selection and options.</p>
+                </div>
+                <div class="membership-feature">
+                    <object class="membership-feature__svg" data="assets/keepCash.svg" type="image/svg+xml"></object>
+                    <p class="membership-feature__title">Keep cash in your pocket</p>
+                    <p class="membership-feature__text">No application fees or security deposit.</p>
+                </div>
+                <div class="membership-feature">
+                    <object class="membership-feature__svg" data="assets/enjoyGuaranteed.svg"
+                            type="image/svg+xml"></object>
+                    <p class="membership-feature__title">Enjoy guaranteed peace of mind</p>
+                    <p class="membership-feature__text">If you're not completely satisfied in your first week, we'll
+                        make it right. <a class="membership-feature__link" href="#">Learn
+                            More</a></p>
+                </div>
+                <div class="membership-feature">
+                    <object class="membership-feature__svg" data="assets/getUpTo.svg" type="image/svg+xml"></object>
+                    <p class="membership-feature__title">Get up to 7 free travel days</p>
+                    <p class="membership-feature__text">Stay with Landing on your next trip. Get up to 7 free days
+                        every year. <a class="membership-feature__link" href="#">Learn More</a>
+                    </p>
+                </div>
+                <div class="membership-feature">
+                    <object class="membership-feature__svg" data="assets/restEasy.svg" type="image/svg+xml"></object>
+                    <p class="membership-feature__title">Rest easy with 24/7 member support</p>
+                    <p class="membership-feature__text">Questions can come up anytime, so we're always available to
+                        help.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!--Landing Explorer-->
     <section class="explorer">
-        <img class="photo" src="assets/photoRates.png" alt="">
-        <div class="explorer-features">
-            <h2>Get the best rates and even more freedom with Landing Explorer</h2>
-            <div class="explorer-feature">
-                <img src="assets/bestRates.svg" alt="">
-                <div class="explorer-feature-description">
-                    <p><b>Best Rates</b></p>
-                    <p>Explorer members always get our lowest monthly rates.</p>
+        <div class="container container_explorer">
+            <div class="explorer-features">
+                <h2 class="explorer-features__title">Get the best rates and even more freedom with Landing
+                    Explorer</h2>
+                <div class="explorer-feature">
+                    <object class="explorer-feature__svg" data="assets/bestRates.svg" type="image/svg+xml"></object>
+                    <div class="explorer-feature__description">
+                        <p class="explorer-feature__title">Best Rates</p>
+                        <p class="explorer-feature__text">Explorer members always get our lowest monthly rates.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="explorer-feature">
-                <img src="assets/ultimateFlexibility.svg" alt="">
-                <div class="explorer-feature-description">
-                    <p><b>Ultimate Flexibility</b></p>
-                    <p>When you're ready for something new, simply give a 30-day notice; there's no lease to break or
-                        transfer fees.</p>
+                <div class="explorer-feature">
+                    <object class="explorer-feature__svg" data="assets/ultimateFlexibility.svg"
+                            type="image/svg+xml"></object>
+                    <div class="explorer-feature__description">
+                        <p class="explorer-feature__title">Ultimate Flexibility</p>
+                        <p class="explorer-feature__text">When you're ready for something new, simply give a 30-day
+                            notice;
+                            there's no lease to break
+                            or
+                            transfer fees.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="explorer-feature">
-                <img src="assets/easyTransfers.svg" alt="">
-                <div class="explorer-feature-description">
-                    <p><b>Easy Transfers</b></p>
-                    <p>Seamlessly move between Landing apartments anywhere, anytime.</p>
+                <div class="explorer-feature">
+                    <object class="explorer-feature__svg" data="assets/easyTransfers.svg" type="image/svg+xml"></object>
+                    <div class="explorer-feature__description">
+                        <p class="explorer-feature__title">Easy Transfers</p>
+                        <p class="explorer-feature__text">Seamlessly move between Landing apartments anywhere,
+                            anytime.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,43 +193,43 @@
 
     <!--Landing Furnished-->
     <section class="furnished">
-        <p class="heading">Landing Furnished</p>
-        <h2>Enjoy all the amenities of a fully furnished Landing home</h2>
+        <div class="container container_furnished">
+            <h2 class="furnished__title">Landing Furnished</h2>
+            <p class="furnished__subtitle">Enjoy all the amenities of a fully furnished Landing home</p>
 
-        <div class="furnished-figures-container">
-            <p>Every Landing includes:</p>
+            <p class="furnished__title">Every Landing includes:</p>
             <div class="furnished-figures">
-                <figure>
-                    <img src="assets/photoComfy.png" alt="">
-                    <figcaption>Comfy, in-house designed furnishing</figcaption>
+                <figure class="furnished-figures__figure">
+                    <img class="furnished-figures__image" src="assets/photo-comfy.jpg" alt="">
+                    <figcaption class="furnished-figures__caption">Comfy, in-house designed furnishing</figcaption>
                 </figure>
-                <figure>
-                    <img src="assets/photoLuxury.png" alt="">
-                    <figcaption>Luxury mattress and linens</figcaption>
+                <figure class="furnished-figures__figure">
+                    <img class="furnished-figures__image" src="assets/photo-luxury.jpg" alt="">
+                    <figcaption class="furnished-figures__caption">Luxury mattress and linens</figcaption>
                 </figure>
-                <figure>
-                    <img src="assets/photoKitchen.png" alt="">
-                    <figcaption>A fully-equipped kitchen</figcaption>
+                <figure class="furnished-figures__figure">
+                    <img class="furnished-figures__image" src="assets/photo-kitchen.jpg" alt="">
+                    <figcaption class="furnished-figures__caption">A fully-equipped kitchen</figcaption>
                 </figure>
-                <figure>
-                    <img src="assets/photoWorkspaces.png" alt="">
-                    <figcaption>Dedicated workspaces</figcaption>
+                <figure class="furnished-figures__figure">
+                    <img class="furnished-figures__image" src="assets/photo-workspaces.jpg" alt="">
+                    <figcaption class="furnished-figures__caption">Dedicated workspaces</figcaption>
                 </figure>
-                <figure>
-                    <img src="assets/photoSmartTv.png" alt="">
-                    <figcaption>Smart TV + Wifi</figcaption>
+                <figure class="furnished-figures__figure">
+                    <img class="furnished-figures__image" src="assets/photo-smartTV.jpg" alt="">
+                    <figcaption class="furnished-figures__caption">Smart TV + Wifi</figcaption>
                 </figure>
-                <figure>
-                    <img src="assets/photoPremium.png" alt="">
-                    <figcaption>Premium toiletries</figcaption>
+                <figure class="furnished-figures__figure">
+                    <img class="furnished-figures__image" src="assets/photo-premium.jpg" alt="">
+                    <figcaption class="furnished-figures__caption">Premium toiletries</figcaption>
                 </figure>
-                <figure>
-                    <img src="assets/photoPlenty.png" alt="">
-                    <figcaption>Plenty of storage</figcaption>
+                <figure class="furnished-figures__figure">
+                    <img class="furnished-figures__image" src="assets/photo-plenty.jpg" alt="">
+                    <figcaption class="furnished-figures__caption">Plenty of storage</figcaption>
                 </figure>
-                <figure>
-                    <img src="assets/photoThoughfull.png" alt="">
-                    <figcaption>Thoughtful finishing touches</figcaption>
+                <figure class="furnished-figures__figure">
+                    <img class="furnished-figures__image" src="assets/photo-thoughfull.jpg" alt="">
+                    <figcaption class="furnished-figures__caption">Thoughtful finishing touches</figcaption>
                 </figure>
             </div>
         </div>
@@ -168,254 +237,306 @@
 
     <!--Reviews-->
     <section class="reviews">
-        <p class="heading">See what our members have to say</p>
-        <div class="reviews-block">
-            <div class="review">
-                <div>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
+        <div class="container">
+            <h2 class="reviews__title">See what our members have to say</h2>
+
+            <div class="reviews-block">
+                <div class="review">
+                    <div class="review__stars">
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                    </div>
+                    <p class="review__author">Waseem A.</p>
+                    <p class="review__location">Fort Lauderdale, FL</p>
+                    <p class="review__text">Even on the conservative side, apartment buildings except a three-month
+                        minimum
+                        (lease)... If they do offer month-to-month, it's often as much as twice the
+                        rental price, and it's incredibly annoying to furnish a place if you're only going to live there
+                        for
+                        a month.</p>
                 </div>
-                <p>Waseem A.</p>
-                <p class="shaded">Fort Lauderdale, FL</p>
-                <p class="review-text">Even on the conservative side, apartment buildings except a three-month
-                    minimum
-                    (lease)... If they do offer month-to-month, it's often as much as twice the
-                    rental price, and it's incredibly annoying to furnish a place if you're only going to live there for
-                    a month.</p>
-            </div>
-            <div class="review">
-                <div>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
+                <div class="review">
+                    <div class="review__stars">
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                    </div>
+                    <p class="review__author">Waseem A.</p>
+                    <p class="review__location">Fort Lauderdale, FL</p>
+                    <p class="review__text">Even on the conservative side, apartment buildings except a three-month
+                        minimum
+                        (lease)... If they do offer month-to-month, it's often as much as twice the
+                        rental price, and it's incredibly annoying to furnish a place if you're only going to live there
+                        for
+                        a month.</p>
                 </div>
-                <p>Michael H.</p>
-                <p class="shaded">Tampa, FL</p>
-                <p class="review-text">Landing's apartments have everything under the sun. When we arrived, we
-                    brought things that we
-                    thought
-                    Landing wouldn't know we needed. But they had it - so now we have two of everything.</p>
-            </div>
-            <div class="review">
-                <div>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
-                    <span><img src="assets/star.svg" alt=""></span>
+                <div class="review">
+                    <div class="review__stars">
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                        <span><img src="assets/star.svg" alt=""></span>
+                    </div>
+                    <p class="review__author">Waseem A.</p>
+                    <p class="review__location">Fort Lauderdale, FL</p>
+                    <p class="review__text">Even on the conservative side, apartment buildings except a three-month
+                        minimum
+                        (lease)... If they do offer month-to-month, it's often as much as twice the
+                        rental price, and it's incredibly annoying to furnish a place if you're only going to live there
+                        for
+                        a month.</p>
                 </div>
-                <p>Daniel O.</p>
-                <p class="shaded">Nashville, TN</p>
-                <p class="review-text">The biggest perk is the flexibility, the fact that if I want to live
-                    anywhere from Nashville to
-                    Seattle, Austin to New York City, I have a way to do it. Landing makes the world accessible in a way
-                    that it wasn't before.</p>
+                <div class="review">
+                    <div class="review__stars">
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                    </div>
+                    <p class="review__author">Michael H.</p>
+                    <p class="review__location">Tampa, FL</p>
+                    <p class="review__text">Landing's apartments have everything under the sun. When we arrived, we
+                        brought things that we
+                        thought
+                        Landing wouldn't know we needed. But they had it - so now we have two of everything.</p>
+                </div>
+                <div class="review">
+                    <div class="review__stars">
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                        <span class="review__star"><img src="assets/star.svg" alt=""></span>
+                    </div>
+                    <p class="review__author">Daniel O.</p>
+                    <p class="review__location">Nashville, TN</p>
+                    <p class="review__text">The biggest perk is the flexibility, the fact that if I want to live
+                        anywhere from Nashville to
+                        Seattle, Austin to New York City, I have a way to do it. Landing makes the world accessible in a
+                        way
+                        that it wasn't before.</p>
+                </div>
             </div>
-        </div>
-        <div class="logos">
-            <img src="assets/WSJ.svg" alt="">
-            <img src="assets/forbes.svg" alt="">
-            <img src="assets/bloomberg.svg" alt="">
-            <img src="assets/yahoo.svg" alt="">
-            <img src="assets/chicago.svg" alt="">
-            <img src="assets/curbed.svg" alt="">
+            <div class="logos">
+                <img class="logos__logo" src="assets/WSJ.svg" alt="WSJ">
+                <img class="logos__logo" src="assets/forbes.svg" alt="Forbes">
+                <img class="logos__logo" src="assets/bloomberg.svg" alt="Bloomberg">
+                <img class="logos__logo" src="assets/yahoo.svg" alt="Yahoo">
+                <img class="logos__logo" src="assets/chicago.svg" alt="Chicago">
+                <img class="logos__logo" src="assets/curbed.svg" alt="Curbed">
+            </div>
         </div>
     </section>
 
     <!--Cities-->
     <section class="cities">
-        <p class="heading">See where members love to live</p>
-        <p class="offering">We offer over 80 cities, and counting, across the U.S. and encourage you to explore with our
-            free, 7-day
-            travel benefit.</p>
+        <div class="container container_cities">
+            <h2 class="cities__title">See where members love to live</h2>
+            <p class="cities__offering">We offer over 80 cities, and counting, across the U.S. and encourage you to
+                explore
+                with our
+                free, 7-day
+                travel benefit.</p>
 
-        <div class="slideshow">
-            <figure>
-                <img src="assets/city1.jpg" alt="">
-                <figcaption>Austin</figcaption>
-            </figure>
-            <figure>
-                <img src="assets/city2.jpg" alt="">
-                <figcaption>Denver</figcaption>
-            </figure>
-            <figure>
-                <img src="assets/city3.jpg" alt="">
-                <figcaption>Miami</figcaption>
-            </figure>
-            <figure>
-                <img src="assets/city4.jpg" alt="">
-                <figcaption>Atlanta</figcaption>
-            </figure>
-        </div>
+            <div class="cities-slideshow">
+                <figure class="cities-slideshow__figure">
+                    <img class="cities-slideshow__image" src="assets/city1.jpg" alt="">
+                    <figcaption class="cities-slideshow__caption">Austin</figcaption>
+                </figure>
+                <figure class="cities-slideshow__figure">
+                    <img class="cities-slideshow__image" src="assets/city2.jpg" alt="">
+                    <figcaption class="cities-slideshow__caption">Denver</figcaption>
+                </figure>
+                <figure class="cities-slideshow__figure">
+                    <img class="cities-slideshow__image" src="assets/city3.jpg" alt="">
+                    <figcaption class="cities-slideshow__caption">Miami</figcaption>
+                </figure>
+                <figure class="cities-slideshow__figure">
+                    <img class="cities-slideshow__image" src="assets/city4.jpg" alt="">
+                    <figcaption class="cities-slideshow__caption">Atlanta</figcaption>
+                </figure>
+            </div>
 
-        <div class="cities-list">
-            <p><b>More of our favorite cities</b></p>
-            <ul>
+            <p class="cities__title_smaller">More of our favorite cities</p>
+            <ul class="cities-list">
                 <li>
-                    <p class="city">Miami</p>
-                    <p class="state">Florida</p>
+                    <p class="cities-list__city">Miami</p>
+                    <p class="cities-list__state">Florida</p>
                 </li>
                 <li>
-                    <p class="city">Los Angeles</p>
-                    <p class="state">California</p>
+                    <p class="cities-list__city">Los Angeles</p>
+                    <p class="cities-list__state">California</p>
                 </li>
                 <li>
-                    <p class="city">St. Petersburg</p>
-                    <p class="state">Florida</p>
+                    <p class="cities-list__city">St. Petersburg</p>
+                    <p class="cities-list__state">Florida</p>
                 </li>
                 <li>
-                    <p class="city">Boulder</p>
-                    <p class="state">Colorado</p>
+                    <p class="cities-list__city">Boulder</p>
+                    <p class="cities-list__state">Colorado</p>
                 </li>
                 <li>
-                    <p class="city">Fort Lauderdale</p>
-                    <p class="state">Florida</p>
+                    <p class="cities-list__city">Fort Lauderdale</p>
+                    <p class="cities-list__state">Florida</p>
                 </li>
                 <li>
-                    <p class="city">Charleston</p>
-                    <p class="state">South Carolina</p>
+                    <p class="cities-list__city">Charleston</p>
+                    <p class="cities-list__state">South Carolina</p>
                 </li>
                 <li>
-                    <p class="city">Portland</p>
-                    <p class="state">Oregon</p>
+                    <p class="cities-list__city">Portland</p>
+                    <p class="cities-list__state">Oregon</p>
                 </li>
                 <li>
-                    <p class="city">Charlotte</p>
-                    <p class="state">South Carolina</p>
+                    <p class="cities-list__city">Charlotte</p>
+                    <p class="cities-list__state">South Carolina</p>
                 </li>
                 <li>
-                    <p class="city">Salt Lake City</p>
-                    <p class="state">Utah</p>
+                    <p class="cities-list__city">Salt Lake City</p>
+                    <p class="cities-list__state">Utah</p>
                 </li>
                 <li>
-                    <p class="city">New York</p>
-                    <p class="state">New York</p>
+                    <p class="cities-list__city">New York</p>
+                    <p class="cities-list__state">New York</p>
                 </li>
                 <li>
-                    <p class="city">Washington</p>
-                    <p class="state">D.C.</p>
+                    <p class="cities-list__city">Washington</p>
+                    <p class="cities-list__state">D.C.</p>
                 </li>
                 <li>
-                    <p class="city">Philadelphia</p>
-                    <p class="state">Pennsylvania</p>
+                    <p class="cities-list__city">Philadelphia</p>
+                    <p class="cities-list__state">Pennsylvania</p>
                 </li>
                 <li>
-                    <p class="city">San Francisco</p>
-                    <p class="state">California</p>
+                    <p class="cities-list__city">San Francisco</p>
+                    <p class="cities-list__state">California</p>
                 </li>
                 <li>
-                    <p class="city">Phoenix</p>
-                    <p class="state">Arizona</p>
+                    <p class="cities-list__city">Phoenix</p>
+                    <p class="cities-list__state">Arizona</p>
                 </li>
                 <li>
-                    <p class="city">Baltimore</p>
-                    <p class="state">Maryland</p>
+                    <p class="cities-list__city">Baltimore</p>
+                    <p class="cities-list__state">Maryland</p>
                 </li>
                 <li>
-                    <p class="city">Oklahoma City</p>
-                    <p class="state">Oklahoma</p>
+                    <p class="cities-list__city">Oklahoma City</p>
+                    <p class="cities-list__state">Oklahoma</p>
                 </li>
                 <li>
-                    <p class="city">Chicago</p>
-                    <p class="state">Illinois</p>
+                    <p class="cities-list__city">Chicago</p>
+                    <p class="cities-list__state">Illinois</p>
                 </li>
                 <li>
-                    <p class="city">Las Vegas</p>
-                    <p class="state">Nevada</p>
+                    <p class="cities-list__city">Las Vegas</p>
+                    <p class="cities-list__state">Nevada</p>
                 </li>
                 <li>
-                    <p class="city">Fort Worth</p>
-                    <p class="state">Texas</p>
+                    <p class="cities-list__city">Fort Worth</p>
+                    <p class="cities-list__state">Texas</p>
                 </li>
                 <li>
-                    <p class="city">Tampa</p>
-                    <p class="state">Florida</p>
+                    <p class="cities-list__city">Tampa</p>
+                    <p class="cities-list__state">Florida</p>
                 </li>
                 <li>
-                    <p class="city">Boston</p>
-                    <p class="state">Massachusetts</p>
+                    <p class="cities-list__city">Boston</p>
+                    <p class="cities-list__state">Massachusetts</p>
                 </li>
                 <li>
-                    <p class="city">Orlando</p>
-                    <p class="state">Florida</p>
+                    <p class="cities-list__city">Orlando</p>
+                    <p class="cities-list__state">Florida</p>
                 </li>
                 <li>
-                    <p class="city">Richmond</p>
-                    <p class="state">Virginia</p>
+                    <p class="cities-list__city">Richmond</p>
+                    <p class="cities-list__state">Virginia</p>
                 </li>
                 <li>
-                    <p class="city">Nashville</p>
-                    <p class="state">Tennessee</p>
+                    <p class="cities-list__city">Nashville</p>
+                    <p class="cities-list__state">Tennessee</p>
                 </li>
             </ul>
-            <button>View All Cities</button>
+            <button class="cities-list__button" type="button">View All Cities</button>
         </div>
     </section>
 </main>
-<footer>
-    <div class="navigation">
-        <p>Landing is a network of furnished apartments for rent across the country.</p>
-        <nav class="column">
-            <p>Cities</p>
-            <a href="#">Austin</a>
-            <a href="#">Birmingham</a>
-            <a href="#">Boston</a>
-            <a href="#">Chicago</a>
-            <a href="#">Dallas</a>
-        </nav>
-        <nav class="column">
-            <p>Landing</p>
-            <a href="#">Member Benefits</a>
-            <a href="#">Blog</a>
-            <a href="#">About</a>
-            <a href="#">Refer a Friend</a>
-            <a href="#">Become a Host</a>
-            <a href="#">Become a Partner</a>
-            <a href="#">Careers</a>
-        </nav>
-        <nav class="column">
-            <p>Support</p>
-            <a href="#">Contact us</a>
-            <a href="#">FAQ</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy policy</a>
-        </nav>
-    </div>
 
-    <div class="contacts">
-        <p>&copy; Landing 2021. All rights reserved.</p>
-        <div>
-            <p class="phone">412-234-1231</p>
-            <div>
-                <a href="#">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 0.811035C5.18991 0.811035 0.478271 5.48068 0.478271 11.239C0.478271 16.9973 5.18991 21.667 11 21.667C16.8101 21.667 21.5217 16.9973 21.5217 11.239C21.5217 5.48068 16.8101 0.811035 11 0.811035ZM15.8041 8.94166C15.8087 9.04429 15.811 9.1474 15.811 9.25098C15.811 12.4138 13.3819 16.0609 8.93968 16.0611H8.93985H8.93968C7.57583 16.0611 6.30668 15.6649 5.2379 14.986C5.42687 15.0081 5.61921 15.0191 5.81396 15.0191C6.94551 15.0191 7.98682 14.6365 8.8135 13.9944C7.75628 13.975 6.86491 13.2831 6.5573 12.332C6.70452 12.36 6.85592 12.3752 7.01117 12.3752C7.2316 12.3752 7.44514 12.3459 7.64807 12.291C6.54301 12.0716 5.71056 11.1037 5.71056 9.94471C5.71056 9.9339 5.71056 9.92424 5.71089 9.9142C6.03631 10.0935 6.40847 10.2014 6.80471 10.2135C6.15625 9.78469 5.72999 9.05161 5.72999 8.22117C5.72999 7.78265 5.8496 7.3718 6.05703 7.01808C7.24798 8.46638 9.02783 9.41885 11.035 9.51894C10.9936 9.34359 10.9723 9.16093 10.9723 8.97316C10.9723 7.65185 12.0538 6.57987 13.3875 6.57987C14.0822 6.57987 14.7097 6.8709 15.1504 7.33616C15.7006 7.22859 16.2172 7.02938 16.684 6.75522C16.5033 7.31388 16.1206 7.78265 15.6219 8.07908C16.1104 8.02116 16.5761 7.89275 17.0087 7.70213C16.6856 8.18219 16.2756 8.60385 15.8041 8.94166Z"
-                              fill="black" fill-opacity="0.7"/>
-                    </svg>
+<footer class="footer">
+    <div class="container container_footer">
+        <div class="links">
+            <p class="links__title">Landing is a network of furnished apartments for rent across the country.</p>
+            <div class="column">
+                <span class="column__title">Cities</span>
+                <a class="column__link" href="#">Austin</a>
+                <a class="column__link" href="#">Birmingham</a>
+                <a class="column__link" href="#">Boston</a>
+                <a class="column__link" href="#">Chicago</a>
+                <a class="column__link" href="#">Dallas</a>
+            </div>
+            <div class="column">
+                <span class="column__title">Landing</span>
+                <a class="column__link" href="#">Member Benefits</a>
+                <a class="column__link" href="#">Blog</a>
+                <a class="column__link" href="#">About</a>
+                <a class="column__link" href="#">Refer a Friend</a>
+                <a class="column__link" href="#">Become a Host</a>
+                <a class="column__link" href="#">Become a Partner</a>
+                <a class="column__link" href="#">Careers</a>
+            </div>
+            <div class="column">
+                <span class="column__title">Support</span>
+                <a class="column__link" href="#">Contact us</a>
+                <a class="column__link" href="#">FAQ</a>
+                <a class="column__link" href="#">Terms of Service</a>
+                <a class="column__link" href="#">Privacy policy</a>
+            </div>
+        </div>
 
-                </a>
-                <a href="#">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.1289 0.669434C5.31881 0.669434 0.607178 5.38106 0.607178 11.1912C0.607178 17.0013 5.31881 21.7129 11.1289 21.7129C16.9391 21.7129 21.6507 17.0013 21.6507 11.1912C21.6507 5.38106 16.9391 0.669434 11.1289 0.669434ZM17.1343 13.682C17.105 14.3252 17.0028 14.7643 16.8534 15.1487C16.5396 15.9603 15.8981 16.6018 15.0865 16.9157C14.7022 17.065 14.263 17.1671 13.62 17.1965C12.9757 17.2259 12.7699 17.2329 11.129 17.2329C9.4881 17.2329 9.28244 17.2259 8.63799 17.1965C7.995 17.1671 7.55574 17.065 7.17154 16.9157C6.76824 16.764 6.40316 16.5263 6.10133 16.2187C5.79404 15.9171 5.55626 15.5519 5.40454 15.1487C5.25523 14.7645 5.15296 14.3252 5.12374 13.6822C5.09404 13.0378 5.08714 12.832 5.08714 11.1912C5.08714 9.55036 5.09404 9.34453 5.12358 8.70026C5.1528 8.05709 5.25491 7.61799 5.40422 7.23364C5.55594 6.8305 5.79387 6.46525 6.10133 6.16358C6.403 5.85613 6.76824 5.61836 7.17138 5.46664C7.55574 5.31733 7.99484 5.21522 8.63799 5.18584C9.28228 5.15646 9.4881 5.14939 11.1289 5.14939C12.7698 5.14939 12.9755 5.15646 13.6198 5.186C14.263 5.21522 14.7021 5.31733 15.0865 5.46648C15.4895 5.61819 15.8548 5.85613 16.1567 6.16358C16.4639 6.46541 16.7019 6.8305 16.8534 7.23364C17.0029 7.61799 17.105 8.05709 17.1344 8.70026C17.1638 9.34453 17.1707 9.55036 17.1707 11.1912C17.1707 12.832 17.1638 13.0378 17.1343 13.682Z"
-                              fill="black" fill-opacity="0.7"/>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.5217 11.239C21.5217 5.48067 16.8101 0.811035 11 0.811035C5.18991 0.811035 0.478271 5.48067 0.478271 11.239C0.478271 16.9973 5.18991 21.667 11 21.667C11.0618 21.667 11.1233 21.6657 11.185 21.6646V13.5469H8.92443V10.9359H11.185V9.01453C11.185 6.78624 12.5575 5.57345 14.5631 5.57345C15.5235 5.57345 16.349 5.64441 16.5897 5.67607V8.00492H15.2067C14.1156 8.00492 13.9043 8.51888 13.9043 9.27294V10.9359H16.5133L16.1733 13.5469H13.9043V21.2641C18.3023 20.0145 21.5217 15.9988 21.5217 11.239Z"
-                              fill="black" fill-opacity="0.7"/>
-                    </svg>
-                </a>
+        <div class="contacts">
+            <p class="contacts__copyright">&copy; Landing 2021. All rights reserved.</p>
+            <div class="bottom">
+                <p class="bottom__phone">412-234-1231</p>
+                <div class="social">
+                    <a class="social__twitter" href="#">
+                        <svg class="social__svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 0.811035C5.18991 0.811035 0.478271 5.48068 0.478271 11.239C0.478271 16.9973 5.18991 21.667 11 21.667C16.8101 21.667 21.5217 16.9973 21.5217 11.239C21.5217 5.48068 16.8101 0.811035 11 0.811035ZM15.8041 8.94166C15.8087 9.04429 15.811 9.1474 15.811 9.25098C15.811 12.4138 13.3819 16.0609 8.93968 16.0611H8.93985H8.93968C7.57583 16.0611 6.30668 15.6649 5.2379 14.986C5.42687 15.0081 5.61921 15.0191 5.81396 15.0191C6.94551 15.0191 7.98682 14.6365 8.8135 13.9944C7.75628 13.975 6.86491 13.2831 6.5573 12.332C6.70452 12.36 6.85592 12.3752 7.01117 12.3752C7.2316 12.3752 7.44514 12.3459 7.64807 12.291C6.54301 12.0716 5.71056 11.1037 5.71056 9.94471C5.71056 9.9339 5.71056 9.92424 5.71089 9.9142C6.03631 10.0935 6.40847 10.2014 6.80471 10.2135C6.15625 9.78469 5.72999 9.05161 5.72999 8.22117C5.72999 7.78265 5.8496 7.3718 6.05703 7.01808C7.24798 8.46638 9.02783 9.41885 11.035 9.51894C10.9936 9.34359 10.9723 9.16093 10.9723 8.97316C10.9723 7.65185 12.0538 6.57987 13.3875 6.57987C14.0822 6.57987 14.7097 6.8709 15.1504 7.33616C15.7006 7.22859 16.2172 7.02938 16.684 6.75522C16.5033 7.31388 16.1206 7.78265 15.6219 8.07908C16.1104 8.02116 16.5761 7.89275 17.0087 7.70213C16.6856 8.18219 16.2756 8.60385 15.8041 8.94166Z"
+                                  fill="black" fill-opacity="0.7"/>
+                        </svg>
+                    </a>
+                    <a class="social__instagram" href="#">
+                        <svg class="social__svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1428 11.1912C13.1428 12.3034 12.2412 13.2051 11.1289 13.2051C10.0166 13.2051 9.11499 12.3034 9.11499 11.1912C9.11499 10.0789 10.0166 9.17725 11.1289 9.17725C12.2412 9.17725 13.1428 10.0789 13.1428 11.1912Z"
+                                  fill="black" fill-opacity="0.7"/>
+                            <path d="M15.8385 7.62816C15.7417 7.36582 15.5873 7.12837 15.3866 6.93346C15.1917 6.73277 14.9544 6.57832 14.6919 6.48152C14.479 6.39883 14.1592 6.30042 13.5701 6.27361C12.9329 6.24455 12.7419 6.23828 11.1287 6.23828C9.51532 6.23828 9.32427 6.24438 8.68721 6.27344C8.09816 6.30042 7.77818 6.39883 7.56545 6.48152C7.30295 6.57832 7.06551 6.73277 6.87076 6.93346C6.67007 7.12837 6.51562 7.36566 6.41865 7.62816C6.33597 7.84105 6.23755 8.16102 6.21074 8.75008C6.18168 9.38713 6.17542 9.57819 6.17542 11.1916C6.17542 12.8047 6.18168 12.9958 6.21074 13.633C6.23755 14.2221 6.33597 14.5419 6.41865 14.7548C6.51562 15.0173 6.66991 15.2546 6.8706 15.4495C7.06551 15.6502 7.30279 15.8046 7.56529 15.9014C7.77818 15.9843 8.09816 16.0826 8.68721 16.1095C9.32427 16.1386 9.51516 16.1446 11.1285 16.1446C12.7421 16.1446 12.9331 16.1386 13.5699 16.1095C14.1591 16.0826 14.479 15.9843 14.6919 15.9014C15.2188 15.6982 15.6353 15.2817 15.8385 14.7548C15.9213 14.5419 16.0196 14.2221 16.0466 13.633C16.0757 12.9958 16.0818 12.8047 16.0818 11.1916C16.0818 9.57819 16.0757 9.38713 16.0466 8.75008C16.0198 8.16102 15.9214 7.84105 15.8385 7.62816ZM11.1287 14.2938C9.41513 14.2938 8.02606 12.905 8.02606 11.1914C8.02606 9.47785 9.41513 8.08893 11.1287 8.08893C12.842 8.08893 14.2311 9.47785 14.2311 11.1914C14.2311 12.905 12.842 14.2938 11.1287 14.2938ZM14.3538 8.69131C13.9534 8.69131 13.6288 8.36669 13.6288 7.96628C13.6288 7.56587 13.9534 7.24123 14.3538 7.24123C14.7542 7.24123 15.0789 7.56587 15.0789 7.96628C15.0787 8.36669 14.7542 8.69131 14.3538 8.69131Z"
+                                  fill="black" fill-opacity="0.7"/>
+                            <path d="M11.1289 0.669434C5.31881 0.669434 0.607178 5.38106 0.607178 11.1912C0.607178 17.0013 5.31881 21.7129 11.1289 21.7129C16.9391 21.7129 21.6507 17.0013 21.6507 11.1912C21.6507 5.38106 16.9391 0.669434 11.1289 0.669434ZM17.1343 13.682C17.105 14.3252 17.0028 14.7643 16.8534 15.1487C16.5396 15.9603 15.8981 16.6018 15.0865 16.9157C14.7022 17.065 14.263 17.1671 13.62 17.1965C12.9757 17.2259 12.7699 17.2329 11.129 17.2329C9.4881 17.2329 9.28244 17.2259 8.63799 17.1965C7.995 17.1671 7.55574 17.065 7.17154 16.9157C6.76824 16.764 6.40316 16.5263 6.10133 16.2187C5.79404 15.9171 5.55626 15.5519 5.40454 15.1487C5.25523 14.7645 5.15296 14.3252 5.12374 13.6822C5.09404 13.0378 5.08714 12.832 5.08714 11.1912C5.08714 9.55036 5.09404 9.34453 5.12358 8.70026C5.1528 8.05709 5.25491 7.61799 5.40422 7.23364C5.55594 6.8305 5.79387 6.46525 6.10133 6.16358C6.403 5.85613 6.76824 5.61836 7.17138 5.46664C7.55574 5.31733 7.99484 5.21522 8.63799 5.18584C9.28228 5.15646 9.4881 5.14939 11.1289 5.14939C12.7698 5.14939 12.9755 5.15646 13.6198 5.186C14.263 5.21522 14.7021 5.31733 15.0865 5.46648C15.4895 5.61819 15.8548 5.85613 16.1567 6.16358C16.4639 6.46541 16.7019 6.8305 16.8534 7.23364C17.0029 7.61799 17.105 8.05709 17.1344 8.70026C17.1638 9.34453 17.1707 9.55036 17.1707 11.1912C17.1707 12.832 17.1638 13.0378 17.1343 13.682Z"
+                                  fill="black" fill-opacity="0.7"/>
+                        </svg>
+                    </a>
+                    <a class="social__facebook" href="#">
+                        <svg class="social__svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5217 11.239C21.5217 5.48067 16.8101 0.811035 11 0.811035C5.18991 0.811035 0.478271 5.48067 0.478271 11.239C0.478271 16.9973 5.18991 21.667 11 21.667C11.0618 21.667 11.1233 21.6657 11.185 21.6646V13.5469H8.92443V10.9359H11.185V9.01453C11.185 6.78624 12.5575 5.57345 14.5631 5.57345C15.5235 5.57345 16.349 5.64441 16.5897 5.67607V8.00492H15.2067C14.1156 8.00492 13.9043 8.51888 13.9043 9.27294V10.9359H16.5133L16.1733 13.5469H13.9043V21.2641C18.3023 20.0145 21.5217 15.9988 21.5217 11.239Z"
+                                  fill="black" fill-opacity="0.7"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
 </footer>
-<script src="script.js"></script>
+<script src="js/vendor/jquery-3.6.0.slim.min.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
