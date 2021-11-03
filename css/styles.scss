@@ -182,7 +182,7 @@ button {
     }
     
     &::after {
-      content:      url('/assets/arrow-down.svg');
+      content:      url('../assets/arrow-down.svg');
       height:       20px;
       width:        10px;
       margin-left:  auto;
@@ -349,7 +349,7 @@ button {
     }
     
     &::before {
-      content:      url('/assets/loopa.svg');
+      content:      url('../assets/loopa.svg');
       margin-right: 10px;
     }
   }
@@ -388,7 +388,7 @@ button {
   
   &__link {
     &::after {
-      content:            url('/assets/arrow-right.svg');
+      content:            url('../assets/arrow-right.svg');
       margin-left:        10px;
       -webkit-transition: margin-left 0.1s;
       -o-transition:      margin-left 0.1s;
@@ -440,7 +440,7 @@ button {
 // EXPLORER
 .explorer {
   background-color:    #fbede4;
-  background-image:    url('/assets/photo-rates.png');
+  background-image:    url('../assets/photo-rates.png');
   background-repeat:   no-repeat;
   background-position: center left 7vw;
 }
@@ -731,8 +731,11 @@ button {
 
 
 // FOOTER
-.container_footer {
+.footer {
   background: $dark-green;
+}
+
+.container_footer {
   min-height: max-content;
   color:      $footer;
 }
@@ -1110,7 +1113,7 @@ button {
 @media (max-width: 425px) {
   .intro {
     &__title {
-      font-size: 2.5rem;
+      font-size:  2.5rem;
       margin-top: 60%;
     }
     
