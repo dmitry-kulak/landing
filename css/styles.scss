@@ -69,7 +69,6 @@ button {
 
 
 .container {
-  padding:               0 7vw;
   min-height:            100vh;
   height:                max-content;
   display:               -webkit-box;
@@ -79,7 +78,7 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction:    column;
   flex-direction:        column;
-  max-width:             1650px;
+  max-width:             1440px;
   margin:                0 auto;
 }
 
@@ -203,6 +202,7 @@ button {
     -webkit-transition: background-color 0.1s;
     -o-transition:      background-color 0.1s;
     transition:         background-color 0.1s;
+    font-size:          1rem;
     
     &:hover {
       background: darken(white, 5%);
@@ -232,13 +232,13 @@ button {
 
 // INTRO
 .intro {
-  background:      #f3f3f2;
-  background-size: 50vw;
+  background: #f3f3f2;
   
   &__title {
     font-size:   3rem;
     font-weight: normal;
     z-index:     1;
+    width:       40%;
   }
   
   &__text {
@@ -247,6 +247,8 @@ button {
     margin-top:    1rem;
     margin-bottom: 5rem;
     z-index:       1;
+    width:         40%;
+    
   }
   
   &__background {
@@ -262,9 +264,6 @@ button {
   -ms-flex-pack:    center;
   justify-content:  center;
   height:           92vh;
-  width:            40%;
-  padding-right:    0;
-  margin:           0;
 }
 
 .search-form {
@@ -281,6 +280,7 @@ button {
   padding:            10px 0;
   border-radius:      8px;
   width:              50vw;
+  max-width:          960px;
   -webkit-box-shadow: 0 16px 24px rgba(0, 0, 0, 0.12);
   box-shadow:         0 16px 24px rgba(0, 0, 0, 0.12);
   z-index:            1;
@@ -439,13 +439,11 @@ button {
 
 // EXPLORER
 .explorer {
-  background-color:    #fbede4;
-  background-image:    url('../assets/photo-rates.png');
-  background-repeat:   no-repeat;
-  background-position: center left 7vw;
+  background-color: #fbede4;
 }
 
 .container_explorer {
+  background:        url('../assets/photo-rates.png') no-repeat center left;
   -webkit-box-align: end;
   -ms-flex-align:    end;
   align-items:       flex-end;
@@ -815,7 +813,33 @@ button {
   display: flex;
 }
 
+@media (min-width: 1921px) {
+  .container {
+    min-height: 66vh;
+    
+    &_navbar {
+      min-height: 8vh;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .intro {
+    &__background {
+      display: none;
+    }
+  }
+  
+  .container_intro {
+    background: url('../assets/photo-intro.jpg') no-repeat top right;
+  }
+}
+
 @media (max-width: 1440px) {
+  .container {
+    padding: 0 7vw;
+  }
+  
   .cities {
     &__title {
       font-size: 3rem;
@@ -851,24 +875,20 @@ button {
     
     &__title {
       margin-top: 6rem;
+      width:      80%;
     }
     
-    .search-form {
-      width: 100%;
+    &__text {
+      width: 80%;
     }
   }
   
-  .container_intro {
-    width:   80%;
-    padding: 0;
-    margin:  0 auto;
-  }
-  
-  .explorer {
-    background-image: none;
+  .search-form {
+    width: 100%;
   }
   
   .container_explorer {
+    background-image:  none;
     -webkit-box-align: center;
     -ms-flex-align:    center;
     align-items:       center;
@@ -1056,6 +1076,11 @@ button {
   .intro {
     &__title {
       margin-top: 40%;
+      width:      auto;
+    }
+    
+    &__text {
+      width: auto;
     }
   }
   
