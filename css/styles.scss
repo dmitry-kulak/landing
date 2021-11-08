@@ -830,8 +830,14 @@ button {
     }
   }
   
-  .container_intro {
-    background: url('../assets/photo-intro.jpg') no-repeat top right;
+  .container {
+    &_intro {
+      background: url('../assets/photo-intro.jpg') no-repeat top right;
+    }
+    
+    &_footer {
+      min-height: max-content;
+    }
   }
 }
 

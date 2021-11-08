@@ -732,6 +732,9 @@ button {
   .container_intro {
     background: url("../assets/photo-intro.jpg") no-repeat top right;
   }
+  .container_footer {
+    min-height: max-content;
+  }
 }
 @media (max-width: 1440px) {
   .container {
